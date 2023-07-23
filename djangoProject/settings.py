@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-53wk8^!-rb$ep72ibazf#zpml+8ru*jj3d=*o4=hor5)cooc+y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['oliverlabs.fly.dev']
 
 
 # Application definition
