@@ -10,6 +10,12 @@ I believe in the power of collaborative learning. If you find any errors, have s
 ## Licence
 This project is licensed under the MIT License. You are free to use, modify, and distribute the code in accordance with the terms specified in the license. See the `LICENSE` file for more details.
 
+## Install
+`pip install -r requirements.txt`
+
+## Run
+`python manage.py runserver`
+
 ## Provision on fly.io
 `flyctl launch`
 
