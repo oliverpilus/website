@@ -1,3 +1,3 @@
 function goToAiChat() {
-    window.location.href='/ai_chat'
+    window.location.href='/ai_chat';
 }

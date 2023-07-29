@@ -8,3 +8,8 @@ def ai_chat(request):
 
 def home_page(request):
     return render(request, 'app/home_page.html')
+
+
+def ai_handle_input(request):
+    print(request.body)
+    return None
