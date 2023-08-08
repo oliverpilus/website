@@ -4,3 +4,4 @@ gunicorn==20.1.0
 sqlparse==0.4.4
 langchain==0.0.250
 openai==0.27.8
+python-dotenv

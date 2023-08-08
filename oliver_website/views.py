@@ -1,5 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from dotenv import load_dotenv
+from langchain.schema import (
+    AIMessage,
+    HumanMessage,
+    SystemMessage
+)
+from langchain.chat_models import ChatOpenAI
+
+load_dotenv()
 
 
 def ai_chat(request):
@@ -12,5 +21,9 @@ def home_page(request):
 
 def ai_handle_input(request):
     print(request.body)
-    return HttpResponse("Oliver was here", status=201)
 
+    chat = ChatOpenAI()
+    ai_output = chat([HumanMessage(content=request.body)])
+    print(ai_output)
+
+    return HttpResponse(ai_output.content, status=201)
