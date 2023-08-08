@@ -1,12 +1,19 @@
 function handleUserInput() {
     //get text of input box
     var userInput = document.getElementById("user-input").value;
-
+    if (userInput===""){
+        return
+    }
     //get text of chat history
     var chatHistory = document.getElementById("chat-history").value;
 
     //append inputVal to value of text box
-    document.getElementById("chat-history").value = chatHistory + "\n" + userInput;
+    if (chatHistory===""){
+        document.getElementById("chat-history").value = userInput;
+    }
+    else {
+        document.getElementById("chat-history").value = chatHistory + "\n" + userInput;
+    }
     document.getElementById("user-input").value = ""
 
     // alert(inputVal)
@@ -15,8 +22,7 @@ function handleUserInput() {
     let csrfToken = document.getElementsByName("csrfmiddlewaretoken")[0].value
 
     let user_input = {
-        input: userInput,
-        csrfmiddlewaretoken: csrfToken
+        input: userInput
     }
 
 
@@ -24,13 +30,22 @@ function handleUserInput() {
     const url = "/ai_handle_input"
     let xhr = new XMLHttpRequest()
     xhr.open('POST', url, true)
-    xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+    xhr.setRequestHeader('X-CSRFToken', csrfToken)
     xhr.send(post);
     xhr.onload = function () {
         if (xhr.status === 201) {
-            console.log("Post successfully created!")
+            var newChatHistory = document.getElementById("chat-history").value;
+            document.getElementById("chat-history").value = newChatHistory + "\n" +xhr.responseText
+            console.log(xhr.responseText)
         }
     }
-
-
 }
+
+document.getElementById("user-input")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        handleUserInput();
+    }
+});

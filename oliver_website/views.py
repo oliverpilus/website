@@ -12,4 +12,5 @@ def home_page(request):
 
 def ai_handle_input(request):
     print(request.body)
-    return None
+    return HttpResponse("Oliver was here", status=201)
+
