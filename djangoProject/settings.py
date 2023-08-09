@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-53wk8^!-rb$ep72ibazf#zpml+8ru*jj3d=*o4=hor5)cooc+y
 DEBUG = True
 
 ALLOWED_HOSTS = ['oliverlabs.fly.dev', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://oliverlabs.fly.dev', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://oliverlabs.fly.dev', 'http://127.0.0.1']
 
 # Application definition
 

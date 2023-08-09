@@ -7,29 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <i class="bi bi-trophy-fill"></i>
-            Oliver's website
-        </a>        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/ai_chat">AI Chat</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+{% include "./fragments/navbar.html" %}
 <div class="mx-auto p-3" style="width: 50%">
     <h1>Welcome to the AI Chat Page</h1>
 </div>
@@ -37,11 +18,13 @@
 <div class="card mx-auto" style="width: 90%">
     {#  <img src="..." class="card-img-top" alt="...">#}
     <div class="card-body">
-        <p class="card-text">Welcome to our AI Chat Page, where cutting-edge technology meets interactive communication!
-            Here, we have harnessed the power of Artificial Intelligence to create an immersive chat experience like no
-            other. Engage in meaningful conversations, seek assistance, or simply explore the capabilities of our
-            AI-powered chatbot. Whether you're a tech enthusiast, an aspiring AI developer, or just curious about the
-            potential of AI, this platform offers a glimpse into the fascinating world of artificial intelligence.</p>
+        <p class="card-text">The AI chat program is a cutting-edge conversational tool that provides users with a
+            seamless and engaging experience.
+            Unlike traditional chat programs, this AI chat program is designed to prioritize privacy by not remembering
+            any conversations it has with users.
+            By not retaining user conversations, the AI chat program ensures that all interactions remain completely
+            confidential and secure. This feature allows users to freely express themselves without worrying about their
+            conversations being stored or accessed later. </p>
     </div>
 </div>
 
@@ -52,8 +35,9 @@
 
 <div class="input-group mx-auto mt-3" style="width: 90%">
     <input type="text" class="form-control" placeholder="Type here" aria-label="Recipient's username"
-           aria-describedby="button-addon2" id="user-input" >
-    <button class="btn btn-outline-secondary" type="button" onclick="handleUserInput()" id="button-addon2">Enter</button>
+           aria-describedby="button-addon2" id="user-input">
+    <button class="btn btn-outline-secondary" type="button" onclick="handleUserInput()" id="button-addon2">Enter
+    </button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
