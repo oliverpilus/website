@@ -27,3 +27,5 @@ def ai_handle_input(request):
     print(ai_output)
 
     return HttpResponse(ai_output.content, status=201)
+def conversational_ai_chat(request):
+    return render(request, 'app/conversational_ai_chat.html')

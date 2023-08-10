@@ -19,18 +19,18 @@
             {#            <img src="..." class="card-img-top" alt="...">#}
             <div class="card-body">
                 <h5 class="card-title">AI Chat</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary" onclick="goToAiChat()">go to chat</a>
+                <p class="card-text">An AI chat that doesn't remember the full conversation can engage in real-time
+                    interactions but lacks the ability to retain past interactions.</p>
+                <a href="#" class="btn btn-primary" onclick="goToAiChat()">Go to chat</a>
             </div>
         </div>
         <div class="card m-5" style="width: 24rem;">
             {#            <img src="..." class="card-img-top" alt="...">#}
             <div class="card-body">
-                <h5 class="card-title">2</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Conversational AI chat</h5>
+                <p class="card-text">An AI chat with remarkable memory capabilities, allowing it to recall and retain
+                    the details of conversations, providing a seamless and personalized experience.</p>
+                <a href="#" class="btn btn-primary" onclick="goToConversationalAiChat()">Go to chat</a>
             </div>
         </div>
 
@@ -66,5 +66,6 @@
 {% load static %}
 
 <script src="{% static 'home_page.js' %}"></script>
+{% include "./fragments/footer.html" %}
 </body>
 </html>
