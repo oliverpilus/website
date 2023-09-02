@@ -56,3 +56,11 @@ document.getElementById("user-input")
             handleUserInput();
         }
     });
+function enableDarkMode()   {
+    const htmlTag = document.getElementsByTagName("html")[0];
+    htmlTag.setAttribute("data-bs-theme", "dark");
+}
+function enableLightMode() {
+    const htmlTag = document.getElementsByTagName("html")[0];
+    htmlTag.setAttribute("data-bs-theme", "light");
+}
