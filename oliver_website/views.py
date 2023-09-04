@@ -25,7 +25,7 @@ llm = ChatOpenAI()
 prompt = ChatPromptTemplate(
     messages=[
         SystemMessagePromptTemplate.from_template(
-            "You are a very rude chatbot having a conversation with a human."
+            "You are a nice chat bot having a conversation with a human."
         ),
         # The `variable_name` here is what must align with memory
         MessagesPlaceholder(variable_name="chat_history"),
@@ -72,3 +72,6 @@ def conversational_ai_handle_input(request):
 
 def conversational_ai_chat(request):
     return render(request, 'app/conversational_ai_chat.html')
+
+def custom_conversational_ai_chat(request):
+    return render(request, 'app/custom_conversational_ai_chat.html')
