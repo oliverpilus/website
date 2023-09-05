@@ -1,5 +1,5 @@
 function handleUserInput() {
-     document.getElementById("user-input").setAttribute('disabled' , 'true ')
+    document.getElementById("user-input").setAttribute('disabled', 'true ')
     //get text of input box
     var userInput = document.getElementById("user-input").value;
     if (userInput === "") {
@@ -29,7 +29,7 @@ function handleUserInput() {
 
 
     let post = JSON.stringify(user_input)
-    const url = "/ai_handle_input"
+    const url = "/conversational_ai_handle_input"
     let xhr = new XMLHttpRequest()
     xhr.open('POST', url, true)
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
@@ -44,7 +44,7 @@ function handleUserInput() {
             var textarea = document.getElementById('chat-history');
             textarea.scrollTop = textarea.scrollHeight;
         }
-     document.getElementById("user-input").removeAttribute('disabled')
+        document.getElementById("user-input").removeAttribute('disabled')
     }
 }
 
@@ -56,3 +56,4 @@ document.getElementById("user-input")
             handleUserInput();
         }
     });
+
