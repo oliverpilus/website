@@ -73,5 +73,8 @@ def conversational_ai_handle_input(request):
 def conversational_ai_chat(request):
     return render(request, 'app/conversational_ai_chat.html')
 
-def custom_conversational_ai_chat(request):
-    return render(request, 'app/custom_conversational_ai_chat.html')
+def custom_chat_selection(request):
+    return render(request, 'app/custom_chat_selection.html')
+
+def nice_conversational_ai_chat(request):
+    return render(request, 'app/nice_conversational_ai_chat.html')
