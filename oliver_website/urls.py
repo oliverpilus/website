@@ -8,5 +8,6 @@ urlpatterns = [
     path('conversational_ai_handle_input',views.conversational_ai_handle_input, name="ai_handle_input"),
     path('conversational_ai_chat',views.conversational_ai_chat, name="conversational_ai_chat"),
     path('custom_chat_selection', views.custom_chat_selection, name="custom_chat_selection"),
-    path('nice_conversational_ai_chat',views.nice_conversational_ai_chat, name="nice_conversational_ai_chat")
+    path('nice_conversational_ai_chat',views.nice_conversational_ai_chat, name="nice_conversational_ai_chat"),
+    path('rude_conversational_ai_chat',views.rude_conversational_ai_chat, name="rude_conversational_ai_chat")
 ]
